@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Child access</title>
+</head>
+<body>
+	<p>Click on the button to know about the body element's child node</p>
+	<ul id="u">
+		<li>Apple</li>
+		<li>Mango</li>
+		<li>Banana</li>
+	</ul>
+	<button onclick="disp_info()">Click Me!</button>
+	<p><strong>Note:</strong>Whitespace inside elements are considered as text and text is considered as nodes. Comments are also considered as nodes.</p>
+
+	<p id="demo"></p>
+    
+   
+
+	<script type="text/javascript">
+		function disp_info() {
+			var p = document.getElementById("u");
+            var q = p.childNodes;
+            var txt = "";
+            var i;
+            for(i=0;i<q.length;i++){
+                txt = txt + q[i].textContent +"<br>";
+            }
+            document.getElementById("demo").innerHTML = txt;
+		}
+		function set_image() {
+			var i = document.createElement("img");
+            var att = document.createAttribute("src");
+            att.value = "images/img1.jpg";
+            i.setAttributeNode(att);
+            
+            document.body.appendChild(i);
+		}
+		function setPara() {
+			var para = document.createElement("p");
+			var t = document.createTextNode("This is a paragraph containing gyaan");
+            para.appendChild(t);
+            document.body.appendChild(para);
+		}
+       
+	</script>
+	  <p>
+    	<button onclick="set_image()">display</button>
+    </p>
+     <p>
+    	<button onclick="setPara()">Para</button>
+    </p>
+</body>
+</html>

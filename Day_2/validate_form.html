@@ -1,0 +1,66 @@
+<html>
+<form name="my form" action="" onsubmit="return val()">
+    Name:<input type="text" name='txtname'><p id="msg"></p>
+    <br>
+    Password:<input type="password" name='password'><p id="msg1"></p>
+    Mobile No:<input type="number" name="number"><p id="msg2"></p>
+    <input type="submit" value="Register">
+    </form>
+<script>
+	function val() {
+		var a=1,b=1,c=1;
+		if(validate())
+			a =0;
+		if(validate1())
+			b =0;
+		if(validate2())
+			c =0;
+		return false;
+	}
+     function validate(){
+         
+         var a=document.forms["my form"]["txtname"].value;
+         if(a.length<3){
+             alert("please enter more than 3 character");
+             document.getElementById("msg").innerHTML="Name should be more than 3 char";
+             return false;
+         }
+         else{
+             return true;
+             
+         }
+     }function validate1(){
+         
+         var a=document.forms["my form"]["password"].value;
+         if(a.length<6){
+             alert("please enter more than 6 character");
+             document.getElementById("msg1").innerHTML="password should be more than 6 char";
+             return false;
+         }
+         else{
+             return true;
+             
+         }
+     }
+    function validate2(){
+         
+         var a=document.forms["my form"]["number"].value;
+         if(a.length<6){
+             alert("please enter validate mobile Number");
+             document.getElementById("msg2").innerHTML="please enter validate mobile Number";
+             return false;
+         }
+         else{
+             return true;
+             
+         }
+     }
+    
+    
+    </script>
+    <style type="text/css">
+    	#msg,#msg1,#msg2{
+    		color: red;
+    	}
+    </style>
+</html>

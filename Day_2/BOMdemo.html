@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BOM Demo</title>
+</head>
+<script type="text/javascript">
+	var myWindow;
+	function openWin() {
+		myWindow = window.open("https://www.codepen.io","Boss","width=400,height=300");		
+	}
+    function closeWin() {
+    	myWindow.close();
+    }
+    function checkWin() {
+    	msg ="";
+    	if(!myWindow)
+    		msg = "Window was never opened";
+    	else
+    		if(myWindow.closed){
+    			msg = "Window is closed";
+    		}
+    		else
+    			msg = "window is open";
+    	document.getElementById("msg").innerHTML = msg;
+    }
+    function moveWin() {
+    	console.log("moving the window");
+        myWindow.focus();
+    	myWindow.moveTo(300,50);
+        
+        
+    	
+    }
+</script>
+<body>
+	<form>
+		<input type="button" value="Open window" onclick="openWin()">
+		<input type="button" value="close window" onclick="closeWin()">
+        <input type="button" value="check window" onclick="checkWin()">
+        <input type="button" value="move window" onclick="moveWin()">
+	</form>
+	<p id="msg">
+	</p>
+
+
+</body>
+</html>

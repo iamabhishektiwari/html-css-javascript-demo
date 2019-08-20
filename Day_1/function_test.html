@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		//function test
+		// function greet() { 
+		// 	alert("Hello World!")
+		// }
+		function check() {
+			var age = parseInt(prompt("enter age",5)); //input testing
+		if(age>=18)
+			return 0;
+		else
+			return (18-age);		
+		} 
+        function vote_right(){
+            var ab = check();
+            if(ab==0)
+                alert("Hell Yeah! you can vote");
+            else
+                alert("OOPs wait for another "+ab+" years")
+        }
+		
+	</script>
+	<!-- <script type="text/javascript">
+		vote_right();
+	</script> --> 
+	<!-- Method calling demo -->
+    
+    <!-- event handling demo -->
+    <input type="submit" value="check" onclick="vote_right()">
+
+
+</body>
+</html>

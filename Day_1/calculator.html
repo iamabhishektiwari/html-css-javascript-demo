@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+        
+		function addition(a,b) {
+			alert("result "+(a+b));
+		}
+		function substract(a,b) {
+			alert("result is: "+(a-b));
+		}
+		function multiply( a,  b) {
+			alert("result is: "+(a*b));
+		}
+	</script>
+    
+	<script type="text/javascript">
+		var num1 = parseInt(prompt("enter the first number"));
+		var num2 = parseInt(prompt("enter the second number"));
+		document.write("<input type='submit' name='substract' value='substract' onclick='substract(num1,num2)'><input type='submit' name='addition' value='addition' onclick='addition(num1,num2)'>	<input type='submit' name='multiply' value='multiply' onclick='multiply(num1,num2)'>")
+	</script>
+</body>
+</html>
